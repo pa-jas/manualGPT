@@ -12,7 +12,7 @@ from decouple import config
 with open('jas_manual_model.pkl', 'rb') as f:
     data = pickle.load(f)
 
-os.environ["OPENAI_API_KEY"] = config('openai_key', default='')
+os.environ["OPENAI_API_KEY"] = "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"
 
 chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
