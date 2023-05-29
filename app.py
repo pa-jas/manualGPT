@@ -17,7 +17,7 @@ chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
 
 
-st.image("img\jas_logo.png", width=150)
+st.image("./img/jas_logo.png", width=150)
 
 st.markdown("<h1 style='text-align: center;'>JAS Manual Chatbot</h1>", unsafe_allow_html=True)
 # st.title("JAS Manual Chatbot")
