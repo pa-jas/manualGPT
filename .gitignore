@@ -1,6 +1,5 @@
 .env
 docs/
-Prototype 2.ipynb
-Prototype 3.ipynb
+notebooks/
 secrets.env
 .ipynb
