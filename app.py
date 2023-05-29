@@ -12,7 +12,7 @@ import streamlit as st
 with open('jas_manual_model.pkl', 'rb') as f:
     data = pickle.load(f)
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"]
 
 chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
