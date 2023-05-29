@@ -7,12 +7,12 @@ from langchain.callbacks import get_openai_callback as cb
 import pickle
 import os
 import streamlit as st
-from decouple import config
+# from decouple import config
 
 with open('jas_manual_model.pkl', 'rb') as f:
     data = pickle.load(f)
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
