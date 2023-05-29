@@ -68,6 +68,7 @@ if submit_button:
 if reset_button:
     st.empty()
 
+st.write(f'your api key is: {st.secrets["OPEN_AI_KEY"]}')
 
 
 
