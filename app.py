@@ -9,9 +9,12 @@ import os
 import streamlit as st
 # from decouple import config
 
+
+
+
+
 with open('jas_manual_model.pkl', 'rb') as f:
     data = pickle.load(f)
-
 
 chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
