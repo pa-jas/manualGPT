@@ -3,3 +3,4 @@ docs/
 notebooks/
 secrets.env
 .ipynb
+.ipynb_checkpoints
