@@ -9,7 +9,7 @@ import os
 import streamlit as st
 # from decouple import config
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 
 
@@ -68,7 +68,10 @@ if submit_button:
 if reset_button:
     st.empty()
 
-st.write(f'your api key is: {st.secrets["OPEN_AI_KEY"]}')
-
+st.write(f'your api key is: {st.secrets["OPENAI_API_KEY"]}')
+st.write(
+    "Has environment variables been set:",
+    os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
+)
 
 
