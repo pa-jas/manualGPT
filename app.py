@@ -63,9 +63,9 @@ if reset_button:
     st.empty()
 
 
-st.write(
-    "Has environment variables been set:",
-    os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
-)
+# st.write(
+#     "Has environment variables been set:",
+#     os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
+# )
 
 
