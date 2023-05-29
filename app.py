@@ -7,7 +7,13 @@ from langchain.callbacks import get_openai_callback as cb
 import pickle
 import os
 import streamlit as st
-# from decouple import config
+
+st.set_page_config(
+    page_title="SQA Manual Chatbot",
+    page_icon="./img/favicon.png"
+)
+
+
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
