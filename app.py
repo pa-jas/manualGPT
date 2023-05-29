@@ -9,7 +9,7 @@ import os
 import streamlit as st
 # from decouple import config
 
-
+os.environ["OPENAI_API_KEY"] = st.secrets["OPEN_API_KEY"]
 
 
 
