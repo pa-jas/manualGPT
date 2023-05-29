@@ -12,22 +12,21 @@ import streamlit as st
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 
-
-with open('jas_manual_model.pkl', 'rb') as f:
+with open('jas_manual_model-linux.pkl', 'rb') as f:
     data = pickle.load(f)
+
+# with open('jas_manual_model.pkl', 'rb') as f:
+#     data = pickle.load(f)
 
 chain = load_qa_chain(OpenAI(), chain_type = "stuff")
 
 
 
 st.image("./img/jas_logo.png", width=150)
-
 st.markdown("<h1 style='text-align: center;'>JAS Manual Chatbot</h1>", unsafe_allow_html=True)
-# st.title("JAS Manual Chatbot")
-
 st.markdown("<p style='text-align: justify;'>Chatbot ini dibuat untuk membantu anda menemukan jawaban/materi/list dari JAS Manual yang dimiliki oleh tim Safety Quality Assurance (SQA). Anda dapat bertanya menggunakan bahasa Indonesia dan Bahasa Inggris.</p>", unsafe_allow_html=True)
 
-# st.write("Chatbot ini dibuat untuk membantu anda menemukan jawaban/materi/list dari JAS Manual yang dimiliki oleh tim Safety Quality Assurance (SQA). Anda dapat bertanya menggunakan bahasa Indonesia dan Bahasa Inggris.")
+
 
 
 
@@ -48,12 +47,7 @@ with col6 :
     submit_button = st.button("Submit")
 with col7 :
     reset_button = st.button("Reset")
-# with col8 :
-#     pass
-# with col9 :
-#     pass
-# with col10 :
-#     pass
+
 
 
 
@@ -68,7 +62,7 @@ if submit_button:
 if reset_button:
     st.empty()
 
-st.write(f'your api key is: {st.secrets["OPENAI_API_KEY"]}')
+
 st.write(
     "Has environment variables been set:",
     os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"],
